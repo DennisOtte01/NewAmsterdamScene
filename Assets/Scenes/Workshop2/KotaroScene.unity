@@ -185,7 +185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6011169737502129340, guid: 853947bf547be0241a9cd0de5070b3dc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.81
+      value: -34.2
       objectReference: {fileID: 0}
     - target: {fileID: 6011169737502129340, guid: 853947bf547be0241a9cd0de5070b3dc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -673,6 +673,7 @@ GameObject:
   - component: {fileID: 1399428112}
   - component: {fileID: 1399428111}
   - component: {fileID: 1399428114}
+  - component: {fileID: 1399428115}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -798,6 +799,19 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &1399428115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399428110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d162ff1d89ef0084287d1bd5e7ea446e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1826351906}
 --- !u!1 &1631872911 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8018891523020338768, guid: eb2a7a3fe0f349a4392a723a952494da, type: 3}
@@ -838,6 +852,11 @@ MonoBehaviour:
   sound01: {fileID: 8300000, guid: 19f89c6e740e7447f9e12a8310d3e973, type: 3}
   sound02: {fileID: 0}
   sound03: {fileID: 0}
+--- !u!1 &1826351906 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 692411888689721990, guid: 853947bf547be0241a9cd0de5070b3dc, type: 3}
+  m_PrefabInstance: {fileID: 184425480}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1940819764 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8955795629516905908, guid: eb2a7a3fe0f349a4392a723a952494da, type: 3}
@@ -986,6 +1005,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 132376819232061034, guid: eb2a7a3fe0f349a4392a723a952494da, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 132376819232061034, guid: eb2a7a3fe0f349a4392a723a952494da, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.96449095
+      objectReference: {fileID: 0}
+    - target: {fileID: 132376819232061034, guid: eb2a7a3fe0f349a4392a723a952494da, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.26411605
+      objectReference: {fileID: 0}
+    - target: {fileID: 132376819232061034, guid: eb2a7a3fe0f349a4392a723a952494da, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -30.629
+      objectReference: {fileID: 0}
     - target: {fileID: 1503195948877366325, guid: eb2a7a3fe0f349a4392a723a952494da, type: 3}
       propertyPath: m_Name
       value: Maze
