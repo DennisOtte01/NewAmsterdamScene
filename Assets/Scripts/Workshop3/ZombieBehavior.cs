@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class zombiemovement : MonoBehaviour
@@ -154,6 +155,14 @@ public class zombiemovement : MonoBehaviour
             {
                 Debug.DrawRay(transform.position, directionToPlayer * distanceToPlayer, Color.yellow);
             }
+        }
+    }
+
+    private void OnCollisionEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            
         }
     }
 }
