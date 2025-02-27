@@ -2,9 +2,15 @@ using UnityEngine;
 
 public class zombiemovement : MonoBehaviour
 {
-    private string state; // GROUPING, HUNTING and PATROLLING
+    private string state = "IDLE"; // GROUPING, HUNTING and PATROLLING
     private UnityEngine.AI.NavMeshAgent agent;
-
+    
+    [SerializeField] 
+    private GameObject groupManager;
+    private Transform groupCenter;
+    [SerializeField] 
+    private float groupDistance = 10f;
+    
     [SerializeField] 
     private Transform player;
     [SerializeField]
@@ -38,40 +44,50 @@ public class zombiemovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float bobbing = Mathf.Sin(Time.time * bobbingSpeed) * bobbingHeight;
-        transform.position = new Vector3(transform.position.x, transform.position.y + bobbing + 0.25f, transform.position.z);
+        groupCenter = groupManager.GetComponent<Transform>();
         
         DetectPlayer();
 
-        // switch (state)
-        // {
-        //     case "HUNTING": HuntingDo();
-        //         break;
-        //     case "IDLE": IdleDo();
-        //         break;
-        //     case "GROUPING": GroupingDo();
-        //         break;
-        // }
-        if (state == "HUNTING")
+        switch (state)
         {
-            HuntingDo();
+            case "HUNTING": HuntingDo();
+                break;
+            case "IDLE": IdleDo();
+                break;
+            case "GROUPING": GroupingDo();
+                break;
         }
         
     }
     
     public void HuntingEntry()
     {
-        Debug.Log("hunting");
         agent.speed = huntingSpeed;
+        currentHuntingTime = 0;
     }
     
     public void HuntingExit()
     {
-        Debug.Log("stopped hunting");
     }
     
     void HuntingDo() {
         agent.destination = player.position;
+        if (Vector3.Distance(transform.position, groupCenter.position) > groupDistance)
+        {
+            HuntingExit();
+            GroupingEntry();
+            state = "GROUPING";
+        }
+        
+        if(huntingTime > currentHuntingTime)
+        {
+            currentHuntingTime += Time.deltaTime;
+        } else
+        {
+            HuntingExit();
+            IdleEntry();
+            state = "IDLE";
+        }
     }
 
     void IdleEntry()
@@ -81,7 +97,8 @@ public class zombiemovement : MonoBehaviour
 
     void IdleDo()
     {
-        
+        float bobbing = Mathf.Sin(Time.time * bobbingSpeed) * bobbingHeight;
+        transform.position = new Vector3(transform.position.x, transform.position.y + bobbing + 0.25f, transform.position.z);
     }
 
     void IdleExit()
@@ -91,12 +108,18 @@ public class zombiemovement : MonoBehaviour
 
     void GroupingEntry()
     {
-        
+        agent.speed = patrolSpeed;
     }
 
     void GroupingDo()
     {
-        
+        agent.destination = groupCenter.position;
+        if (Vector3.Distance(transform.position, groupCenter.position) < groupDistance)
+        {
+            GroupingExit();
+            IdleEntry();
+            state = "IDLE";
+        }
     }
 
     void GroupingExit()
@@ -130,19 +153,6 @@ public class zombiemovement : MonoBehaviour
             else
             {
                 Debug.DrawRay(transform.position, directionToPlayer * distanceToPlayer, Color.yellow);
-            }
-
-            if(state == "HUNTING")
-            {
-                if(huntingTime > currentHuntingTime)
-                {
-                    currentHuntingTime += Time.deltaTime;
-                } else
-                {
-                    HuntingExit();
-                    IdleEntry();
-                    state = "IDLE";
-                }
             }
         }
     }
