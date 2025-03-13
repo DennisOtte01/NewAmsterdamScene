@@ -117,9 +117,21 @@ PrefabInstance:
       propertyPath: detectionRange
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 4121116020106842803, guid: 7ad604122c53d7d4f883413d7166e855, type: 3}
+      propertyPath: m_Range
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121116020106842803, guid: 7ad604122c53d7d4f883413d7166e855, type: 3}
+      propertyPath: m_Intensity
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 4342108926974754593, guid: 7ad604122c53d7d4f883413d7166e855, type: 3}
       propertyPath: m_Speed
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342108926974754593, guid: 7ad604122c53d7d4f883413d7166e855, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 240
       objectReference: {fileID: 0}
     - target: {fileID: 5484560922583842218, guid: 7ad604122c53d7d4f883413d7166e855, type: 3}
       propertyPath: m_LocalScale.x
@@ -202,15 +214,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1013330556922702102, guid: 7ad604122c53d7d4f883413d7166e855, type: 3}
       propertyPath: fieldOfView
-      value: 65
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 1013330556922702102, guid: 7ad604122c53d7d4f883413d7166e855, type: 3}
       propertyPath: huntingTime
-      value: 10
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 1013330556922702102, guid: 7ad604122c53d7d4f883413d7166e855, type: 3}
       propertyPath: patrolSpeed
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1013330556922702102, guid: 7ad604122c53d7d4f883413d7166e855, type: 3}
       propertyPath: groupManager
@@ -218,15 +230,31 @@ PrefabInstance:
       objectReference: {fileID: 4842652780490390766}
     - target: {fileID: 1013330556922702102, guid: 7ad604122c53d7d4f883413d7166e855, type: 3}
       propertyPath: huntingSpeed
-      value: 4
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1013330556922702102, guid: 7ad604122c53d7d4f883413d7166e855, type: 3}
+      propertyPath: groupDistance
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1013330556922702102, guid: 7ad604122c53d7d4f883413d7166e855, type: 3}
       propertyPath: detectionRange
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 4121116020106842803, guid: 7ad604122c53d7d4f883413d7166e855, type: 3}
+      propertyPath: m_Range
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121116020106842803, guid: 7ad604122c53d7d4f883413d7166e855, type: 3}
+      propertyPath: m_Intensity
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 4342108926974754593, guid: 7ad604122c53d7d4f883413d7166e855, type: 3}
       propertyPath: m_Speed
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342108926974754593, guid: 7ad604122c53d7d4f883413d7166e855, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 240
       objectReference: {fileID: 0}
     - target: {fileID: 5484560922583842218, guid: 7ad604122c53d7d4f883413d7166e855, type: 3}
       propertyPath: m_LocalScale.x
@@ -331,9 +359,21 @@ PrefabInstance:
       propertyPath: detectionRange
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 4121116020106842803, guid: 7ad604122c53d7d4f883413d7166e855, type: 3}
+      propertyPath: m_Range
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121116020106842803, guid: 7ad604122c53d7d4f883413d7166e855, type: 3}
+      propertyPath: m_Intensity
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 4342108926974754593, guid: 7ad604122c53d7d4f883413d7166e855, type: 3}
       propertyPath: m_Speed
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342108926974754593, guid: 7ad604122c53d7d4f883413d7166e855, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 240
       objectReference: {fileID: 0}
     - target: {fileID: 5484560922583842218, guid: 7ad604122c53d7d4f883413d7166e855, type: 3}
       propertyPath: m_LocalScale.x
@@ -438,9 +478,21 @@ PrefabInstance:
       propertyPath: detectionRange
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 4121116020106842803, guid: 7ad604122c53d7d4f883413d7166e855, type: 3}
+      propertyPath: m_Range
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121116020106842803, guid: 7ad604122c53d7d4f883413d7166e855, type: 3}
+      propertyPath: m_Intensity
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 4342108926974754593, guid: 7ad604122c53d7d4f883413d7166e855, type: 3}
       propertyPath: m_Speed
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342108926974754593, guid: 7ad604122c53d7d4f883413d7166e855, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 240
       objectReference: {fileID: 0}
     - target: {fileID: 5484560922583842218, guid: 7ad604122c53d7d4f883413d7166e855, type: 3}
       propertyPath: m_LocalScale.x
