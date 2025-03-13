@@ -3,7 +3,7 @@ using UnityEngine;
 public class Playerr : MonoBehaviour
 {
     public float speed = 5f;
-    public float jumpForce = 5f;
+    public float jumpForce = 7f;
     public bool isGrounded;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -31,7 +31,7 @@ public class Playerr : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            GetComponent<Rigidbody>().AddForce(Vector3.up * 5, ForceMode.Impulse);
+            GetComponent<Rigidbody>().AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isGrounded = false;
         }
     }
